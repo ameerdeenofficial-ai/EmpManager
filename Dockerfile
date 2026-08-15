@@ -3,8 +3,7 @@ WORKDIR /src
 COPY *.csproj ./
 RUN dotnet restore
 COPY . ./
-RUN dotnet publish "EmpManager.csproj" -c Release -o /app/out
-
+RUN dotnet publish "EmpManager.csproj" -c Release -o /app/out /p:UseAppHost=false
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out ./
