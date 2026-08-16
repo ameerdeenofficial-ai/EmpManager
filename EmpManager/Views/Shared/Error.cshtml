@@ -1,19 +1,5 @@
-﻿@model Microsoft.AspNetCore.Mvc.ViewFeatures.ErrorViewModel
-@{
+﻿@{
     ViewData["Title"] = "Error";
 }
-
-<div class="container mt-5">
-    <h1 class="text-danger">Oops! Something went wrong.</h1>
-    <h2 class="text-danger">An error occurred while processing your request.</h2>
-
-    @if (Model != null && Model.ShowRequestId)
-    {
-        <p>
-            <strong>Request ID:</strong> <code>@Model.RequestId</code>
-        </p>
-    }
-
-    <hr />
-    <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Go to Home</a>
-</div>
+<h1 class="text-danger">Error.</h1>
+<p>Something went wrong. Please try again later.</p>
