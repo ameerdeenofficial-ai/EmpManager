@@ -15,7 +15,7 @@ namespace EmpManager.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return Content("App is running! No View needed");
         }
 
         public IActionResult Privacy()
